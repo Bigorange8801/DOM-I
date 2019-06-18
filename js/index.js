@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street <br> Somewhere, USA",
+    "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -47,6 +47,8 @@ navLinks[2].textContent = siteContent['nav']['nav-item-3']
 navLinks[3].textContent = siteContent['nav']['nav-item-4']
 navLinks[4].textContent = siteContent['nav']['nav-item-5']
 navLinks[5].textContent = siteContent['nav']['nav-item-6']
+navLinks.forEach(link => link.style.color ='green')
+
 
 
 
@@ -74,23 +76,18 @@ const bottomConP = document.querySelectorAll('.main-content .bottom-content p');
 bottomConP[0].textContent = siteContent['main-content']['services-content']
 bottomConP[1].textContent = siteContent['main-content']['product-content']
 bottomConP[2].textContent = siteContent['main-content']['vision-content']
-// "contact": {
-//   "contact-h4" : "Contact",
-//   "address" : "123 Way 456 Street <br> Somewhere, USA",
-//   "phone" : "1 (888) 888-8888",
-//   "email" : "sales@greatidea.io",
+
 
 
 const conInfoH4 = document.querySelectorAll('.contact h4');
 conInfoH4[0].textContent = siteContent['contact']['contact-h4']
 const conInfoP =document.querySelectorAll('.contact p')
-// conInfoP[0].textContent = siteContent['contact']['address']
-conInfoP[0].textContent = "123 Way 456 Street Somewhere, USA" 
+conInfoP[0].textContent = siteContent['contact']['address']
 conInfoP[1].textContent = siteContent['contact']['phone']
 conInfoP[2].textContent = siteContent['contact']['email']
 
-console.log(conInfo)
-
+const foot = document.querySelectorAll('footer');
+foot[0].textContent = siteContent['footer']['copyright']
 
 
 
