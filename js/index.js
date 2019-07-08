@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456  Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -52,12 +52,22 @@ navLinks.forEach(link => link.style.color ='green')
 
 
 
+
 const ctaInfo = document.querySelectorAll('h1');
 ctaInfo[0].textContent = "DOM Is Awesome!";
 const ctaButton = document.querySelectorAll('button');
 ctaButton[0].textContent = 'Get Started!'
 let ctaPic = document.getElementById("cta-img");
 ctaPic.src="img/header-img.png"
+let newColor=document.getElementById("color");
+newColor.addEventListener("mouseover", (e)=>{
+  e.target.style.color="red";
+});
+newColor.addEventListener("mouseout",(e2)=>{
+  e2.target.style.color="black";
+});
+
+
 
 
 const topConH4 = document.querySelectorAll('.main-content .top-content .text-content h4');
@@ -88,7 +98,6 @@ conInfoP[2].textContent = siteContent['contact']['email']
 
 const foot = document.querySelectorAll('footer');
 foot[0].textContent = siteContent['footer']['copyright']
-
 
 
 
